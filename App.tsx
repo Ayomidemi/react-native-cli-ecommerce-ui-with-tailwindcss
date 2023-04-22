@@ -1,45 +1,25 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, Switch, Text, View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {useColorScheme} from 'nativewind';
+import ProductList from './constants/productCategory/ProductList';
 
 function App(): JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+  const {colorScheme, toggleColorScheme} = useColorScheme();
 
   return (
-    <SafeAreaView style={backgroundStyle}>
+    <SafeAreaView className="flex-1 items-center justify-center bg-gray-200 dark:bg-black ">
       <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
+        barStyle={colorScheme === 'dark' ? 'light-content' : 'dark-content'}
       />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Text className="text-red-500">hi bitchhh</Text>
-        </View>
-      </ScrollView>
+      <View className={'flex-row w-full gap-5 mt-4'}>
+        <Text className="dark:text-white text-2xl font-bold">
+          New collection
+        </Text>
+        <Switch value={colorScheme === 'dark'} onChange={toggleColorScheme} />
+      </View>
+
+      <ProductList />
     </SafeAreaView>
   );
 }
