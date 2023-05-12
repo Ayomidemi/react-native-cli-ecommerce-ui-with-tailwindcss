@@ -1,4 +1,8 @@
 PODS:
+  - AmazonChimeSDK-Bitcode (0.23.0):
+    - AmazonChimeSDKMedia-Bitcode (= 0.18.0)
+  - AmazonChimeSDKMachineLearning-Bitcode (0.2.0)
+  - AmazonChimeSDKMedia-Bitcode (0.18.0)
   - boost (1.76.0)
   - CocoaAsyncSocket (7.6.5)
   - DoubleConversion (1.1.6)
@@ -329,6 +333,12 @@ PODS:
   - React-jsinspector (0.71.7)
   - React-logger (0.71.7):
     - glog
+  - react-native-safe-area-context (4.5.1):
+    - RCT-Folly
+    - RCTRequired
+    - RCTTypeSafety
+    - React-Core
+    - ReactCommon/turbomodule/core
   - React-perflogger (0.71.7)
   - React-RCTActionSheet (0.71.7):
     - React-Core/RCTActionSheetHeaders (= 0.71.7)
@@ -419,6 +429,8 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - AmazonChimeSDK-Bitcode
+  - AmazonChimeSDKMachineLearning-Bitcode
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../node_modules/react-native/Libraries/FBLazyVector`)
@@ -464,6 +476,7 @@ DEPENDENCIES:
   - React-jsiexecutor (from `../node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../node_modules/react-native/ReactCommon/jsinspector`)
   - React-logger (from `../node_modules/react-native/ReactCommon/logger`)
+  - react-native-safe-area-context (from `../node_modules/react-native-safe-area-context`)
   - React-perflogger (from `../node_modules/react-native/ReactCommon/reactperflogger`)
   - React-RCTActionSheet (from `../node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../node_modules/react-native/Libraries/NativeAnimation`)
@@ -481,6 +494,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - AmazonChimeSDK-Bitcode
+    - AmazonChimeSDKMachineLearning-Bitcode
+    - AmazonChimeSDKMedia-Bitcode
     - CocoaAsyncSocket
     - Flipper
     - Flipper-Boost-iOSX
@@ -538,6 +554,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/jsinspector"
   React-logger:
     :path: "../node_modules/react-native/ReactCommon/logger"
+  react-native-safe-area-context:
+    :path: "../node_modules/react-native-safe-area-context"
   React-perflogger:
     :path: "../node_modules/react-native/ReactCommon/reactperflogger"
   React-RCTActionSheet:
@@ -568,6 +586,9 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
+  AmazonChimeSDK-Bitcode: b538fcf16108080985ca39ff06a51a8d94a92de7
+  AmazonChimeSDKMachineLearning-Bitcode: 7e678914d0ca34a0d09a0dd544e514021e0b4d38
+  AmazonChimeSDKMedia-Bitcode: b632f9ced4d2689cb65d9d579003e1c42d8407c2
   boost: 57d2868c099736d80fcd648bf211b4431e51a558
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -601,6 +622,7 @@ SPEC CHECKSUMS:
   React-jsiexecutor: eaa5f71eb8f6861cf0e57f1a0f52aeb020d9e18e
   React-jsinspector: 9885f6f94d231b95a739ef7bb50536fb87ce7539
   React-logger: 3f8ebad1be1bf3299d1ab6d7f971802d7395c7ef
+  react-native-safe-area-context: f5549f36508b1b7497434baa0cd97d7e470920d4
   React-perflogger: 2d505bbe298e3b7bacdd9e542b15535be07220f6
   React-RCTActionSheet: 0e96e4560bd733c9b37efbf68f5b1a47615892fb
   React-RCTAnimation: fd138e26f120371c87e406745a27535e2c8a04ef
@@ -618,6 +640,6 @@ SPEC CHECKSUMS:
   Yoga: d56980c8914db0b51692f55533409e844b66133c
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: bf1caa20091f115d25882904c7d81c8bf4a96f44
+PODFILE CHECKSUM: fee3bb7a35e2ae7b6027a76adba295ad5599f241
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.11.3

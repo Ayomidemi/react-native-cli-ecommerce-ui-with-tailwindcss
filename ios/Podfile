@@ -44,6 +44,8 @@ target 'tailwindReactNative' do
   )
 
   target 'tailwindReactNativeTests' do
+    pod 'AmazonChimeSDK-Bitcode'
+    pod 'AmazonChimeSDKMachineLearning-Bitcode'
     inherit! :complete
     # Pods for testing
   end
